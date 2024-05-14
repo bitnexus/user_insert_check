@@ -1,4 +1,4 @@
-module postgres_custom_exporter
+module user_insert_check
 
 go 1.21.9
 
