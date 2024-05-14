@@ -46,7 +46,8 @@ func main() {
   }()
 
   for {
-    query := "SELECT n_tup_ins FROM pg_stat_user_tables WHERE relname = 'users'"
+    // query := "SELECT n_tup_ins FROM pg_stat_user_tables WHERE relname = 'users'"
+    query := "SELECT COUNT(*) FROM users"
     var count int
     err = db.QueryRow(query).Scan(&count)
     if err != nil {
